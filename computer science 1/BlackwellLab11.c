@@ -7,28 +7,28 @@ float averageGrade(int grade[]);
 
 int main(void)
 {
-	int gradeArray[SIZE];												// declare array of SIZE = 6 many integers.
-	int grade;															// int variable holds current grade input by user until it is stored in the array
-	int x;																// for loop control variable
+	int gradeArray[SIZE];					// declare array of SIZE = 6 many integers.
+	int grade;						// int variable holds current grade input by user until it is stored in the array
+	int x;							// for loop control variable
 	int average;
 	
 	for (x=0; x<SIZE;x++)
 	{
 		do
 		{
-		printf("%s%d%s","Enter grade ", x+1, ": ");						// input for each grade
-		scanf("%d",&grade);												// 
+		printf("%s%d%s","Enter grade ", x+1, ": ");	// input for each grade
+		scanf("%d",&grade);						 
 		}
-		while(grade > 100 || grade < 0);								// input range exception handling
-		gradeArray[x] = grade;											// stores current value of grade in gradeArray.
+		while(grade > 100 || grade < 0);		// input range exception handling
+		gradeArray[x] = grade;				// stores current value of grade in gradeArray.
 	}
 	
-	numericSort(gradeArray);											// After all grades are entered, pass array to sorting function.
+	numericSort(gradeArray);				// After all grades are entered, pass array to sorting function.
 	printf("\n%s\n","Sorted grades:");
 	
 	for (x=0; x<SIZE;x++)
 	{
-		numericToLetter(gradeArray[x]);									// prints each element in the sorted array.
+		numericToLetter(gradeArray[x]);			// prints each element in the sorted array.
 	}
 	average = averageGrade(gradeArray);
 	return 0;
@@ -37,8 +37,8 @@ int main(void)
 
 void numericSort(int grade[])
 {
-	int pass;															// passes counter
-	int hold;															// holds temporary value for sorting algorithm
+	int pass;						// passes counter
+	int hold;						// holds temporary value for sorting algorithm
 	int i;
 	for (pass = 1; pass<SIZE; pass++ )
 	{
@@ -77,7 +77,7 @@ void numericToLetter(int numeric)
 
 float averageGrade(int grade[])
 {
-	float accum =0;														// accumulates the total grade points
+	float accum =0;						// accumulates the total grade points
 	int i;																
 	int gradeAvg=0;														
 	int numGrades = 6;													
