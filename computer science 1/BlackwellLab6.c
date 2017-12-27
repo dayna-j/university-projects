@@ -13,10 +13,10 @@ grade average.
 
 int main(void)
 {
-	float accum = 0;													// floating point type used to collect total earned points
-	float grade = 0;													// floating point type used to temporarily hold user input
-	float myGrade;														// float type used to hold final grade average
-	unsigned int counter;												// unsigned int used in for-loop
+	float accum = 0;								// floating point type used to collect total earned points
+	float grade = 0;								// floating point type used to temporarily hold user input
+	float myGrade;									// float type used to hold final grade average
+	unsigned int counter;								// unsigned int used in for-loop
 	unsigned int numGrades;
 	
 	puts("");
@@ -24,18 +24,18 @@ int main(void)
 	scanf("%u", &numGrades);
 	puts("");
 	
-	for (counter = 1; counter <= numGrades; ++counter)					// counter controlled for loop.   compares counter variable to numGrades.
+	for (counter = 1; counter <= numGrades; ++counter)				// counter controlled for loop.   compares counter variable to numGrades.
 	{
 		printf("%s%u: ", "Enter the grade for grade item number ", counter);	
 		scanf("%f",&grade);
-		accum = accum + grade;											// add current grade to accumulator
+		accum = accum + grade;							// add current grade to accumulator
 	}
 	
 	puts("");
 	printf("%s%.2f%%","Average grade: ", (accum/numGrades));			// divide earned points by number of grade items.  Print average with precision of 2.
 	puts("");
 	
-	myGrade = (accum/numGrades);										// assign final grade average to myGrade
+	myGrade = (accum/numGrades);							// assign final grade average to myGrade
 
 	if (myGrade >= 90)
 	{
