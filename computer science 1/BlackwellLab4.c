@@ -1,21 +1,21 @@
-#include <stdio.h>														// include preprocessor directive makes stdio functions available
+#include <stdio.h>							// include preprocessor directive makes stdio functions available
 
-int main(void)															// function header for main function
+int main(void)								// function header for main function
 {	
-	int totalEarned,earnedLab,earnedQuiz,earnedTest;					// integer variables needed for final calculations 
+	int totalEarned,earnedLab,earnedQuiz,earnedTest;		// integer variables needed for final calculations 
 	
-	double finalGrade;													// double finalGrade holds final grade calculation
-	double totalPoints = 720;											// double totalPoints used in final grade calculation
+	double finalGrade;						// double finalGrade holds final grade calculation
+	double totalPoints = 720;					// double totalPoints used in final grade calculation
 	
-	int lab1,lab2,lab3,lab4,lab5,lab6,									// 12 integers to hold lab scores
+	int lab1,lab2,lab3,lab4,lab5,lab6,				// 12 integers to hold lab scores
 		lab7,lab8,lab9,lab10,lab11,lab12;
 	
-	int quiz1,quiz2,quiz3,quiz4,quiz5,									// 10 integers to hold quiz scores
+	int quiz1,quiz2,quiz3,quiz4,quiz5,				// 10 integers to hold quiz scores
 		quiz6,quiz7,quiz8,quiz9,quiz10;
 	
-	int test1,test2,test3,test4;										// 4 integers to hold test scores
+	int test1,test2,test3,test4;					// 4 integers to hold test scores
 	
-	printf("%s","Enter the score for Assignment 1: \t");				// input/output section for labs
+	printf("%s","Enter the score for Assignment 1: \t");		// input/output section for labs
 	scanf("%d",&lab1);
 	printf("Enter the score for Assignment 2: \t");
 	scanf("%d",&lab2);
@@ -40,11 +40,11 @@ int main(void)															// function header for main function
 	printf("Enter the score for Assignment 12: \t");
 	scanf("%d",&lab12);
 
-	earnedLab = lab1+lab2+lab3+lab4+lab5								// tally all lab scores
+	earnedLab = lab1+lab2+lab3+lab4+lab5				// tally all lab scores
 				+lab6+lab7+lab8+lab9+lab10
 				+lab11+lab12;
 
-	printf("Enter the score for Quiz 1: \t\t");							// input/output for quiz scores
+	printf("Enter the score for Quiz 1: \t\t");			// input/output for quiz scores
 	scanf("%d",&quiz1);
 	printf("Enter the score for Quiz 2: \t\t");
 	scanf("%d",&quiz2);
@@ -65,10 +65,10 @@ int main(void)															// function header for main function
 	printf("Enter the score for Quiz 10: \t\t");
 	scanf("%d",&quiz10);
 
-	earnedQuiz = quiz1+quiz2+quiz3+quiz4+quiz5							// tally all quiz scores
+	earnedQuiz = quiz1+quiz2+quiz3+quiz4+quiz5			// tally all quiz scores
 				+quiz6+quiz7+quiz8+quiz9+quiz10;
 
-	printf("Enter the score for Test 1: \t\t");							// input/output for tests
+	printf("Enter the score for Test 1: \t\t");			// input/output for tests
 	scanf("%d",&test1);
 	printf("Enter the score for Test 2: \t\t");
 	scanf("%d",&test2);
@@ -77,10 +77,10 @@ int main(void)															// function header for main function
 	printf("Enter the score for Test 4: \t\t");
 	scanf("%d",&test4);
 	
-	earnedTest = test1+test2+test3+test4;								// tally all test scores
+	earnedTest = test1+test2+test3+test4;				// tally all test scores
 	
-	totalEarned = earnedLab+earnedQuiz+earnedTest;						// sum all earned points
-	finalGrade = (double)totalEarned / totalPoints;						// final calculation.  divide total earned points by total possible points
+	totalEarned = earnedLab+earnedQuiz+earnedTest;			// sum all earned points
+	finalGrade = (double)totalEarned / totalPoints;			// final calculation.  divide total earned points by total possible points
 
 	puts("");	
 	printf("%s%.2f%%","The overall course grade is: ",finalGrade*100);	// output for final result

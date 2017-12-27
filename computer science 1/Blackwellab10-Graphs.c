@@ -2,28 +2,28 @@
 
 #include <stdio.h>
 
-void asterixGraph(int numAsterix);										// function prototype for asterixGraph function.  returns nothing.  
+void asterixGraph(int numAsterix);						// function prototype for asterixGraph function.  returns nothing.  
 																		// accepts integer as argument
 
 int main(void)
 {
-	int x;																// control variable for for loop
-	int graphOne;														// graphOne - graphFive variables hold the lengths of each respective asterix graph
+	int x;									// control variable for for loop
+	int graphOne;								// graphOne - graphFive variables hold the lengths of each respective asterix graph
 	int graphTwo;
 	int graphThree;
 	int graphFour;
 	int graphFive;
 
 	puts("");
-	for (x = 1; x < 6; x++)												// for-loop feeds values 1 - 5 into switch.  
+	for (x = 1; x < 6; x++)							// for-loop feeds values 1 - 5 into switch.  
 	{
 		printf("%s%i%s", "How long is chart ", x, " ? ");
-		switch (x)														// switch takes numbers 1-5 as cases.  each case provides user input and 
-																		// input exception handling.
+		switch (x)							// switch takes numbers 1-5 as cases.  each case provides user input and 
+										// input exception handling.
 		{
 			case 1:
 			scanf("%i", &graphOne);
-			while (graphOne > 50)										// while-loop ensures out-of-range values are rejected as valid input
+			while (graphOne > 50)					// while-loop ensures out-of-range values are rejected as valid input
 			{
 				printf("%s%i%s", "How long is chart ", x, " ? ");
 				scanf("%i", &graphOne);
@@ -71,16 +71,16 @@ int main(void)
 
 	puts("");
 
-	for (x = 1; x < 6; x++)												// outer for-loop iterates nums 1-5.  
+	for (x = 1; x < 6; x++)							// outer for-loop iterates nums 1-5.  
 	{
-		printf("%i%s",x,".  ");											// prints numbered list:  1.  , 2.  ,  3.  , etc!
+		printf("%i%s",x,".  ");						// prints numbered list:  1.  , 2.  ,  3.  , etc!
 				
-		switch (x)														// for loop control variable is input to switch.  Each case corresponds
-																		// to one of 5 function calls to the 
-		{																// asterixGraph function.  
+		switch (x)							// for loop control variable is input to switch.  Each case corresponds
+										// to one of 5 function calls to the 
+		{								// asterixGraph function.  
 			case 1:
 			printf("%i|",graphOne);
-			asterixGraph(graphOne);										// calls asterixGraph function with graphOne as an argument
+			asterixGraph(graphOne);					// calls asterixGraph function with graphOne as an argument
 			break;
 					
 			case 2:
@@ -109,11 +109,11 @@ int main(void)
 }
 
 
-void asterixGraph(int numAsterix)										// function definition of asterixGraph function
+void asterixGraph(int numAsterix)						// function definition of asterixGraph function
 {
 	int i;
-	for (i = 1; i <= numAsterix; i++)									// for values of the control variable less-than-or-equal the length of each graph
+	for (i = 1; i <= numAsterix; i++)					// for values of the control variable less-than-or-equal the length of each graph
 	{
-		printf("%s","*");												// prints a number of asterix equal to the each respective graph length
+		printf("%s","*");						// prints a number of asterix equal to the each respective graph length
 	}
 }
