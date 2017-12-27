@@ -1,0 +1,11 @@
+CSC-250 Computer Science II
+Dayna Blackwell
+File IO Assignment - find longest and shortest line in input file
+
+shortest line length: 6
+shortest line: nibh.
+
+
+longest line length: 132
+longest line: natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In  --<Correct - this is the longest line if the file>--
+
